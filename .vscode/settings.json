@@ -1,0 +1,77 @@
+{
+	"nuxt.isNuxtApp": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"editor.formatOnPaste": false,
+	"editor.experimental.pasteActions.enabled": false,
+	"files.trimTrailingWhitespace": true,
+	"files.maxMemoryForLargeFilesMB": 4096,
+	"files.watcherExclude": {
+		"**/node_modules/*/**": true,
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/.nuxt/**": true,
+		"**/dist/**": true,
+		"**/build/**": true,
+		"**/.output/**": true, // Added based on .gitignore
+		"**/.nitro/**": true, // Added based on .gitignore
+		"**/.cache/**": true, // Added based on .gitignore
+		"**/logs/**": true, // Added based on .gitignore
+		"**/coverage/**": true // Added based on .gitignore
+	},
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false,
+		"vue": false,
+		"javascript": true
+	},
+	"eslint.format.enable": false,
+	"javascript.validate.enable": true,
+	"javascript.suggest.autoImports": true,
+	"terminal.integrated.shellIntegration.enabled": false,
+	"vue.features.preferredScriptSetup": true,
+	"vue.suggest.enabled": true,
+	"vue.validation.template": true,
+	"vue.compiler-compatibility.renderFunction": false,
+	"vue.volar.takeOverMode.enabled": true,
+	"nuxt.telemetry.enabled": false,
+	"workbench.startupEditor": "none",
+	"workbench.enableExperiments": false,
+	"search.followSymlinks": false,
+	"explorer.compactFolders": false,
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	// Try these updated Git settings
+	"git.statusLimit": 1000, // Lower from 5000
+	"git.enabled": true, // You can temporarily set to false when needed
+	"git.ignoreLimitWarning": true,
+	"git.branchProtection": [], // If you don't need branch protection
+	"git.fetchOnPull": false, // Prevents additional network operations
+	// Optional: If Git is still slow
+	"git.autoRepositoryDetection": "subFolders", // Or "off" if you only have one repo
+	"git.detectSubmodules": false, // If you don't use submodules
+	"eslint.validate": [
+		"javascript",
+		"vue"
+	],
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/.nuxt": true,
+		"**/dist": true,
+		"**/.output": true,
+		"**/.cache": true
+	},
+	"typescript.disableAutomaticTypeAcquisition": true,
+	"gitlens.currentLine.enabled": false,
+	"gitlens.hovers.enabled": false,
+	"gitlens.codeLens.enabled": false,
+	"gitlens.statusBar.enabled": false,
+	"gitlens.blame.line.enabled": false,
+	"gitlens.advanced.maxListItems": 100,
+	"gitlens.advanced.fileHistoryFollowsRenames": false,
+	"typescript.suggest.autoImports": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.preferences.includePackageJsonAutoImports": "auto",
+	"typescript.suggest.completeFunctionCalls": true
+}
