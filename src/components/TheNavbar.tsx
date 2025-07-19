@@ -6,6 +6,4 @@ const TheNavBar = () => {
 	);
 };
 
-TheNavBar.displayName = 'TheNavBar';
-
 export default TheNavBar;
