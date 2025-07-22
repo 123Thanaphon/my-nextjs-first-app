@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import 'normalize.css';
 
 :root {
 	--background: #ffffff;
@@ -20,10 +21,9 @@
 }
 
 body {
-	background: var(--background) url('/images/bg-white.jpg');
-	opacity: 0.8;
+	background: var(--background) url('/images/bg-gray.jpg');
+	opacity: 0.9;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,7 +1,7 @@
 const TheNavBar = () => {
 	return (
-		<nav className="p-4 bg-transparent">
-			<div className="container mx-auto text-white font-bold">My Logo | Navigation Links</div>
+		<nav className="container py-4 bg-transparent mx-auto">
+			<h1 className="text-white font-bold">My Logo | Navigation Links</h1>
 		</nav>
 	);
 };
