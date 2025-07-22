@@ -1,9 +1,9 @@
-export const HomePage = () => {
+export const MoviesPage = () => {
 	return (
 		<>
 			<div className="container mx-auto bg-transparent">
 				<h1 className="font-bold text-white">
-					Home Page
+					Movie Page
 				</h1>
 				<div className="container mx-auto mt-4">
 				</div>
@@ -12,4 +12,4 @@ export const HomePage = () => {
 	);
 };
 
-export default HomePage;
+export default MoviesPage;
