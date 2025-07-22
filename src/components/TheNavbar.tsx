@@ -1,7 +1,14 @@
+import Image from 'next/image'
+
 const TheNavBar = () => {
 	return (
 		<nav className="container py-4 bg-transparent mx-auto">
-			<h1 className="text-white font-bold">My Logo | Navigation Links</h1>
+			<Image
+                src="/images/icons/tongflix-01.png"
+				width={100}
+				height={100}
+				alt="tongflix-icon"
+			/>
 		</nav>
 	);
 };

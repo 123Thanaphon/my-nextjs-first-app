@@ -21,7 +21,7 @@
 }
 
 body {
-	background: var(--background) url('/images/bg-gray.jpg');
+	background: var(--background) url('/images/bg-gray-2.jpg');
 	opacity: 0.9;
 	background-size: cover;
 	background-position: center;
