@@ -53,7 +53,9 @@
 	"git.detectSubmodules": false, // If you don't use submodules
 	"eslint.validate": [
 		"javascript",
-		"vue"
+		"typescript",
+		"javascriptreact",
+		"typescriptreact"
 	],
 	"search.exclude": {
 		"**/node_modules": true,
