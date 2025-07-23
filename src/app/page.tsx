@@ -25,14 +25,11 @@ export const HomePage = () => {
 	return (
 		<>
 			<div className="container mx-auto bg-transparent">
-				<h1 className="font-bold text-white">
-					Home Page
-				</h1>
 				<div className="grid grid-cols-5 gap-4">
 					{movieList?.map((movie, index) =>(
 						<div
 							key={index}
-							className="text-white aspect-9/16 bg-transparent"
+							className="text-white aspect-9/16 bg-transparent rounded-3xl overflow-hidden"
 							style={{ width: '100%', height: 'auto' }}
 						>
 							<Image
@@ -40,7 +37,7 @@ export const HomePage = () => {
 								alt={movie.primaryTitle}
 								width={movie.primaryImage?.width || 100}
 								height={movie.primaryImage?.height || 100}
-								style={{objectFit: movie.primaryImage?.url ? "cover" : "contain", width: '100%', height: '100%'}}
+								style={{ objectFit: movie.primaryImage?.url ? "cover" : "contain", width: '100%', height: '100%' }}
 							/>
 						</div>
 					))}
