@@ -19,9 +19,15 @@ const TheNavBar = () => {
 
 			<div className="flex items-center justify-between">
 				<ul className="flex space-x-4">
-					<li><Link href="/" className="text-white hover:underline">Home</Link></li>
-					<li><Link href="/movies" className="text-white hover:underline">Movies</Link></li>
-					<li><Link href="/series" className="text-white hover:underline">Series</Link></li>
+					<li>
+						<Link href="/" className="text-white hover:underline">Home</Link>
+					</li>
+					<li>
+						<Link href="/movies" className="text-white hover:underline">Movies</Link>
+					</li>
+					<li>
+						<Link href="/series" className="text-white hover:underline">Series</Link>
+					</li>
 				</ul>
 			</div>
 		</nav>

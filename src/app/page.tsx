@@ -1,7 +1,9 @@
 'use client';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { getMovies } from '@/services/movie';
 import { Movie } from '@/interfaces/movie';
+import Image from 'next/image'
+import TongFlixLogo from 'assets/images/icons/tongflix-01.png';
 
 export const HomePage = () => {
 	const [movieList, setMovieList] = useState<Movie[]>([])
@@ -28,8 +30,18 @@ export const HomePage = () => {
 				</h1>
 				<div className="grid grid-cols-5 gap-4">
 					{movieList?.map((movie, index) =>(
-						<div key={index} className="text-white aspect-3/2 object-cover">
-							{movie.primaryTitle}
+						<div
+							key={index}
+							className="text-white aspect-9/16 bg-transparent"
+							style={{ width: '100%', height: 'auto' }}
+						>
+							<Image
+								src={movie.primaryImage?.url ?? TongFlixLogo}
+								alt={movie.primaryTitle}
+								width={movie.primaryImage?.width || 100}
+								height={movie.primaryImage?.height || 100}
+								style={{objectFit: movie.primaryImage?.url ? "cover" : "contain", width: '100%', height: '100%'}}
+							/>
 						</div>
 					))}
 				</div>
