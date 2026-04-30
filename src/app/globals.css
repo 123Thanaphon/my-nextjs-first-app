@@ -2,7 +2,7 @@
 @import 'normalize.css';
 
 :root {
-	--background: #ffffff;
+	--background: #fff;
 	--foreground: #171717;
 }
 
@@ -22,8 +22,8 @@
 
 body {
 	background: var(--background) url('/images/bg-gray-2.jpg');
-	opacity: 0.9;
-	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.9;
 }

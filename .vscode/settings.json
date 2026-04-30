@@ -1,79 +1,108 @@
 {
-	"nuxt.isNuxtApp": false,
-	"editor.insertSpaces": false,
-	"editor.tabSize": 4,
-	"editor.formatOnPaste": false,
-	"editor.experimental.pasteActions.enabled": false,
-	"files.trimTrailingWhitespace": true,
-	"files.maxMemoryForLargeFilesMB": 4096,
-	"files.watcherExclude": {
-		"**/node_modules/*/**": true,
-		"**/.git/objects/**": true,
-		"**/.git/subtree-cache/**": true,
-		"**/.nuxt/**": true,
-		"**/dist/**": true,
-		"**/build/**": true,
-		"**/.output/**": true, // Added based on .gitignore
-		"**/.nitro/**": true, // Added based on .gitignore
-		"**/.cache/**": true, // Added based on .gitignore
-		"**/logs/**": true, // Added based on .gitignore
-		"**/coverage/**": true // Added based on .gitignore
-	},
-	"github.copilot.enable": {
-		"*": true,
-		"plaintext": false,
-		"markdown": false,
-		"scminput": false,
-		"vue": false,
-		"javascript": true
-	},
-	"eslint.format.enable": false,
-	"javascript.validate.enable": true,
-	"javascript.suggest.autoImports": true,
-	"terminal.integrated.shellIntegration.enabled": false,
-	"vue.features.preferredScriptSetup": true,
-	"vue.suggest.enabled": true,
-	"vue.validation.template": true,
-	"vue.compiler-compatibility.renderFunction": false,
-	"vue.volar.takeOverMode.enabled": true,
-	"nuxt.telemetry.enabled": false,
-	"workbench.startupEditor": "none",
-	"workbench.enableExperiments": false,
-	"search.followSymlinks": false,
-	"explorer.compactFolders": false,
-	"editor.gotoLocation.multipleDefinitions": "goto",
-	// Try these updated Git settings
-	"git.statusLimit": 1000, // Lower from 5000
-	"git.enabled": true, // You can temporarily set to false when needed
-	"git.ignoreLimitWarning": true,
-	"git.branchProtection": [], // If you don't need branch protection
-	"git.fetchOnPull": false, // Prevents additional network operations
-	// Optional: If Git is still slow
-	"git.autoRepositoryDetection": "subFolders", // Or "off" if you only have one repo
-	"git.detectSubmodules": false, // If you don't use submodules
+	// ── ESLint ─────────────────────────────────────────────
+	"eslint.enable": true,
 	"eslint.validate": [
 		"javascript",
 		"typescript",
 		"javascriptreact",
 		"typescriptreact"
 	],
-	"search.exclude": {
+	"eslint.probe": [
+		"javascript",
+		"typescript",
+		"javascriptreact",
+		"typescriptreact"
+	],
+	"eslint.lintTask.enable": false,
+	"eslint.format.enable": true,
+	"eslint.codeActionsOnSave.rules": null,
+	// ── Editor: Format & Save ─────────────────────────────
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"editor.defaultFormatter": null,
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	// ── Editor: Match ESLint rules ────────────────────────
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.renderWhitespace": "boundary",
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	// ── TypeScript ────────────────────────────────────────
+	"javascript.validate.enable": true,
+	"javascript.suggest.autoImports": true,
+	"typescript.suggest.autoImports": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.preferences.includePackageJsonAutoImports": "auto",
+	"typescript.suggest.completeFunctionCalls": true,
+	"typescript.disableAutomaticTypeAcquisition": true,
+	// ── Files ─────────────────────────────────────────────
+	"files.eol": "\n",
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.exclude": {
+		"**/.next": true,
 		"**/node_modules": true,
-		"**/.nuxt": true,
 		"**/dist": true,
-		"**/.output": true,
+		"**/.git": true,
+		"**/coverage": true
+	},
+	"files.watcherExclude": {
+		"**/.next/**": true,
+		"**/node_modules/**": true,
+		"**/dist/**": true,
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/coverage/**": true,
+		"**/.cache/**": true
+	},
+	// ── Search ────────────────────────────────────────────
+	"search.exclude": {
+		"**/.next": true,
+		"**/node_modules": true,
+		"**/dist": true,
+		"**/coverage": true,
+		"**/public": true,
+		"**/*.min.js": true,
 		"**/.cache": true
 	},
-	"typescript.disableAutomaticTypeAcquisition": true,
+	"search.followSymlinks": false,
+	// ── Performance ───────────────────────────────────────
+	"editor.suggest.snippetsPreventQuickSuggestions": false,
+	"editor.largeFileOptimizations": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": true,
+	"extensions.autoUpdate": false,
+	"explorer.compactFolders": false,
+	// ── Git ───────────────────────────────────────────────
+	"git.enabled": true,
+	"git.worktrees": true,
+	"git.statusLimit": 1000,
+	"git.ignoreLimitWarning": true,
+	"git.fetchOnPull": false,
+	"git.autoRepositoryDetection": "subFolders",
+	"git.detectSubmodules": false,
+	// ── GitLens (ลด overhead) ─────────────────────────────
 	"gitlens.currentLine.enabled": false,
 	"gitlens.hovers.enabled": false,
 	"gitlens.codeLens.enabled": false,
 	"gitlens.statusBar.enabled": false,
 	"gitlens.blame.line.enabled": false,
 	"gitlens.advanced.maxListItems": 100,
-	"gitlens.advanced.fileHistoryFollowsRenames": false,
-	"typescript.suggest.autoImports": true,
-	"typescript.updateImportsOnFileMove.enabled": "always",
-	"typescript.preferences.includePackageJsonAutoImports": "auto",
-	"typescript.suggest.completeFunctionCalls": true
+	"gitlens.advanced.fileHistoryFollowsRenames": false
 }
