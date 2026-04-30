@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 import TongFlixLogo from 'assets/images/icons/tongflix-01.png';
 
 const TheNavBar = () => {
