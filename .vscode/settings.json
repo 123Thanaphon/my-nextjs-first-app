@@ -104,5 +104,7 @@
 	"gitlens.statusBar.enabled": false,
 	"gitlens.blame.line.enabled": false,
 	"gitlens.advanced.maxListItems": 100,
-	"gitlens.advanced.fileHistoryFollowsRenames": false
+	"gitlens.advanced.fileHistoryFollowsRenames": false,
+	// ── CSS ───────────────────────────────────────────────
+	"css.lint.unknownAtRules": "ignore"
 }
